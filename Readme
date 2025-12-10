@@ -1,27 +1,6 @@
 # Electron Spectroscopy Data Analysis Tool
 
-This is a python-based code for data analysis. The code takes raw data (counts vs channels) and translates them to double differential cross section vs electron energy.
+~~~ Grigoris personal space ~~~
 
----
-
-## Team Members
-- Stefanos Nanos
-- Giorgos Spithakis
-- Grigoris Savvakis
-
----
-
-## Repository Structure
-- `main` → Stable code agreed upon by the team.
-- `personal-branch` → Your personal development branch.
-- `README.md` → This file.
-- `.gitignore` → Ignored files (Python cache, virtual environments, logs, etc.).
-
----
-
-## Workflow Guidelines
-
-### 1. Personal Branches
-- Each team member works in their own branch.
-- Commit changes regularly with **clear messages**.
-- Push changes to GitHub frequently
+### What's new? 
+- [Date] : Description
