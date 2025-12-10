@@ -1,6 +1,6 @@
 # Electron Spectroscopy Data Analysis Tool
 
-Short description of your project, e.g., "A Python-based data analysis pipeline for XYZ."
+This is a python-based code for data analysis. The code takes raw data (counts vs channels) and translates them to double differential cross section vs electron energy.  
 
 ---
 
