@@ -1,0 +1,45 @@
+1️⃣ Modes of Operation
+
+- Two modes: low resolution and high resolution.
+* Currently focus on low resolution.
+
+
+2️⃣ Data Loading and Background Subtraction
+
+For each energy window:
+- Load measurements with gas target (M_i) and background measurements (B_i).
+- Compute total measurements (M_tot) and total background (B_tot), then compute backround substracted spectra (F_tot = M_tot - B_tot)
+- BONUS: Check consistency of measurements and backgrounds for each energy window -> If any measurement deviates by > 20% from the others → raise error/warning.
+- Translate counts to DDCS and # channels to electron energy
+
+
+3️⃣ Data Selection / Cropping
+
+- Each energy window has 256 points. Allow the user to select which portion of the data to plot: Crop from beginning / end (independently for each window)
+    * Could be implemented with start_index and end_index for each window / Maybe do it live with scroll bars in the plot (?)
+
+
+4️⃣ Plotting Results
+
+- Plot Ftot for each energy window.
+- Provide options to the user:
+    1) Save figure as image
+    2) Save data as text file
+
+
+5️⃣ Data Averaging
+
+- Allow averaging over N points, where N is user-defined.
+* Multiple N values can be used for different energy ranges.
+
+
+~ Basic functions ~
+
+1) load_data() → load measurement and background files
+2) check_consistency() → check for >20% deviations
+3) Final() → compute Ftot
+4) DDCS() → translate counts to DDCS
+5) Ecal()  → translate channels to electron energy 
+6) crop_data() → crop each window according to user selection
+7) average_data() → perform N-point averaging
+8) plot_results() → plot and save images/data
