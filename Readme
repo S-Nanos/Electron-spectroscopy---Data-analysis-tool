@@ -1,2 +1,27 @@
 # Electron Spectroscopy Data Analysis Tool
-...
+
+Short description of your project, e.g., "A Python-based data analysis pipeline for XYZ."
+
+---
+
+## Team Members
+- Stefanos Nanos
+- Giorgos Spithakis
+- Grigoris Savvakis
+
+---
+
+## Repository Structure
+- `main` → Stable code agreed upon by the team.
+- `personal-branch` → Your personal development branch.
+- `README.md` → This file.
+- `.gitignore` → Ignored files (Python cache, virtual environments, logs, etc.).
+
+---
+
+## Workflow Guidelines
+
+### 1. Personal Branches
+- Each team member works in their own branch.
+- Commit changes regularly with **clear messages**.
+- Push changes to GitHub frequently
