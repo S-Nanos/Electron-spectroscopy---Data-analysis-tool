@@ -3,4 +3,35 @@
 ~~~ Stefanos personal space ~~~
 
 ### What's new? 
-- [Date] : Description
+- [12/12/2025]
+  This Python program provides a graphical interface (GUI) to handle and analyze electron counts from multiple measurements and background files. It is designed for datasets where each file contains 256 channels and 3 columns, where:
+  Column 1: Channel number
+  Column 2: (ignored in calculations)
+  Column 3: Electron counts
+
+  Key Features
+  1) Energy Windows
+      - Users can define multiple energy windows (1 to N).
+      - For each window, users can load multiple measurement files and multiple background files.
+  2) Channel-wise Summation
+      - For each window, the program sums the electron counts per channel across all measurement files and separately across all background files.
+      - The final counts are calculated per channel as:
+                                    Final counts=Sum of measurements−Sum of backgrounds
+  3) Deviation Checking
+      - When files are loaded, the program calculates the average counts per channel across all files in that category (measurements or backgrounds).
+      - It computes the average deviation of each file from this channel-wise average.
+      - If the average deviation exceeds 20%, a warning is displayed.
+      - All channels (1–256) are considered, and division by zero is safely avoided.
+      - This prevents random spikes in individual channels from triggering false warnings.
+  4) GUI Features
+      - Input field for specifying energy window number.
+      - Buttons for loading measurement files and background files.
+      - Button for calculating final summed data.
+      - Results are displayed in a scrollable text box, showing channel number, summed measurements, summed backgrounds, and final counts.
+  5) File Handling
+      - Only .txt files are accepted.
+      - Each file must contain exactly 256 channels.
+      - The program is robust to missing or malformed files and shows error messages where needed.
+  6) Future-proof
+      - Uses sep=r'\s+' for reading whitespace-delimited files, compatible with future pandas versions.
+      - Safe handling of zero counts to prevent runtime warnings.
